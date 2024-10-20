@@ -20,6 +20,12 @@ function language() {
     getQuote();
 } 
 
+// Copy quote with author
+function copyQuote() {
+    const textToPaste = quoteText.textContent + '\n - ' + authorText.textContent;
+    navigator.clipboard.writeText(textToPaste); 
+}
+
 // Switch Loading Status
 function loading() {
     loader.hidden = quotesContainer.hidden;
@@ -56,6 +62,7 @@ async function getQuote() {
 
 //event listners
 newQuoteButton.addEventListener('click', getQuote);
+quotesContainer.addEventListener('click', copyQuote);
 languageSelection.addEventListener('change', language);
 
 // On load

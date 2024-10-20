@@ -26,6 +26,8 @@ body {
 }
 
 .quote-container {
+    user-select: none;
+    cursor: pointer;
     width: auto;
     max-width: 900px;
     padding: 20px 30px;
@@ -67,7 +69,6 @@ button {
     font-family: playfair-display;
     font-weight: 900;
     border-radius: 7px;
-    
 }
 
 button:hover {
