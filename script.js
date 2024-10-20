@@ -13,6 +13,13 @@ const loader = document.getElementById('loader');
 let apiQuotes = [];
 quotesContainer.hidden = false;
 
+// Switch language
+function language() {
+    document.title = languageSelection.value === 'ru' ? 'Волки у костра' : 'Wolves by the fire';
+    newQuoteButton.textContent = languageSelection.value === 'ru' ? 'Новая Цитата' : 'New Quote';
+    getQuote();
+} 
+
 // Switch Loading Status
 function loading() {
     loader.hidden = quotesContainer.hidden;
@@ -48,7 +55,8 @@ async function getQuote() {
 }
 
 //event listners
-newQuoteButton.addEventListener('click' ,getQuote);
+newQuoteButton.addEventListener('click', getQuote);
+languageSelection.addEventListener('change', language);
 
 // On load
 getQuote();
