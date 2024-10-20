@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" /> 
+    <title>Мысли великих</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="quote-container" id="quote-container">
+        <!-- Quote -->
+         <div class="quote-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <span id="quote"></span>
+         </div>
+        <!-- Author -->
+          <div class="quote-author">
+            <span id="author"></span>
+          </div>
+        <!-- Buttons -->
+          <div class="button-container">
+            <select class="select-language" id="lg">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <button id="new-quote">Новая цитата</button>
+          </div>
+    </div>
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+
     <!-- Script -->
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/243c15585a.js" crossorigin="anonymous"></script>
 </body>
 </html>
